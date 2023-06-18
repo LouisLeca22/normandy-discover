@@ -1,0 +1,78 @@
+.switchLang{
+    position: absolute;
+    z-index: 6000;
+    left: 1%;
+    bottom: 2%;
+    @include mq(600px){
+        bottom: 10%;
+    }
+    @media screen and (max-height: 700px){
+        bottom: 10%;
+    }
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    & > div {
+        background-color: $primary-color;
+        padding: .7rem;
+        @include mq(600px){
+            padding: .5rem;
+        }
+        border-radius: 50%; 
+        box-shadow: $shadow-light;
+        transition: all  .5s ease-in-out;
+        .lang-btn{
+            fill: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        &:hover{
+            background: linear-gradient(25deg, darken($primary-color, 10%) 20%, lighten($secondary-color, 20%) 100%);
+            scale: 1.1
+        }
+    }
+  
+    &.active{
+        ul{
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    ul{
+        visibility: hidden;
+        display: flex;
+        gap: 1rem;
+        transform: translateX(-30%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out, transform  1s ease-in-out;
+        li{
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            cursor: pointer;
+            @include flexCenter;
+            &:hover{
+                scale:1.1;
+            }
+            &.active{
+                border: 2px solid $tertiary-color;
+                box-shadow: $shadow-dark;
+                background-color: $tertiary-color;
+            }
+            .flag{
+                width: 3rem;
+                height: 3rem;
+                @include mq(600px){
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}

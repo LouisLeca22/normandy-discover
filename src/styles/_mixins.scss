@@ -1,0 +1,36 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin mq($size){
+    @media only screen and (max-width: $size){
+        @content;
+    }
+}
+
+@mixin fullSpace(){
+    height: 100%;
+    width: 100%;
+}
+
+@mixin chromeScrollbar{
+    
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #e3dddd;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;
+    }
+}
+
+@mixin firefoxScrollbar{
+    scrollbar-color: $secondary-color #e3dddd;
+    scrollbar-width:thin;
+}

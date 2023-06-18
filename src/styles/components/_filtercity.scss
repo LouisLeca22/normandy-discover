@@ -1,0 +1,73 @@
+.filterCity {
+    position: absolute;
+    z-index: 6000;
+    left: 1%;
+    top: 2%;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    gap: 10%;
+
+    &> div:first-child {
+        background-color: $primary-color;
+        padding: .7rem;
+        @include mq(600px) {
+            padding: .5rem;
+        }
+        border-radius: 50%;
+        box-shadow: $shadow-light;
+        transition: all .5s ease-in-out;
+
+        .city-btn {
+            fill: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background: linear-gradient(25deg, darken($primary-color, 10%) 20%, lighten($secondary-color, 20%) 100%);
+            scale: 1.1
+        }
+    }
+
+    &.active {
+        ul {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);  
+        }
+    }
+
+    ul {
+       width: 150px;
+       position: absolute;
+       top: 2%;
+       left: 4rem;
+        outline: none;
+        visibility: hidden;
+        background-color: $primary-color;
+        border: none;
+        padding: .3rem;
+        border-radius: .5rem;
+        font-size: 1rem;
+        color: white;
+        transform: translateX(-30%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        box-shadow: $shadow-light;
+       li{
+        cursor: pointer;
+        border-radius: 5px;
+        padding: .2rem;
+        &:hover{
+            background-color: $secondary-color;
+        }
+        &.active{
+            background-color: $tertiary-color;
+        }
+       }
+    }   
+
+   
+}

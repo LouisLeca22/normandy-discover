@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    line-height: 1;
+    overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+del,
+ins {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+
+
+

@@ -1,0 +1,13 @@
+.leaflet-container {
+    @include fullSpace;
+}
+
+.map-blur {
+    filter: blur(10px) opacity(35%);
+}
+
+.leaflet-control-container {
+    @include mq(600px){
+        display: none;
+    }
+}

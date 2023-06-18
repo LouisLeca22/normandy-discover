@@ -1,0 +1,108 @@
+.popup__middle--tab1{
+    height: 100%;
+    overflow: auto;
+    @include firefoxScrollbar;
+    
+    img{
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        @media (max-width: 1600px){
+            height: 45%;
+        }
+      
+    }
+    p{
+        color: $gray-color;
+        padding: .2rem 1rem;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        @media (max-width: 1600px){
+            line-height: 1.7rem;
+            font-size: .8rem;
+        }
+    }
+    h3{
+        font-style: italic;
+        color: $primary-color;
+        font-weight: 600;
+        padding: .3rem .8rem;
+        margin-top: .8rem;
+    }
+}
+
+.popup__middle--tab2{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    overflow: auto;
+    @include firefoxScrollbar;
+    h2{  
+        padding-left: 1.5rem;
+        color: $tertiary-color;
+        font-size: 1.3rem;
+        @include mq(600px) {
+            font-size: .7rem;
+        }
+    }
+
+    h3{
+        font-style: italic;
+        color: $primary-color;
+        font-weight: 600;
+        padding: .8rem;
+        margin-top: 1.5rem;
+        @media (max-width: 1600px){
+            margin-top: .8rem;
+            font-size: .8rem;
+        }
+    }
+
+    .schedule, .price{
+        & > div {
+            display: flex; 
+            height: max-content;
+            padding: 0 1rem;
+            div{
+                border: 1px solid $secondary-color;
+                width: 100%;
+                height: 100%;
+                @include flexCenter;
+                font-size: 1.2rem;
+                @media (max-width: 1600px){
+                    font-size: .8rem;
+                }
+                color: $tertiary-color;
+                span{
+                    color: $secondary-color;
+                    padding-right: .3rem;
+                }
+            }
+        }
+    }
+
+    .standard{
+        flex-direction: column;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .complex{
+       .days, .morning, .afternoon {
+            div:first-child{
+                color: $gray-color;
+                font-weight: bold;
+            }
+            flex-direction: column;
+        }
+    }
+
+    .website{     
+        a{
+            text-decoration: underline;
+            color: $tertiary-color;
+            width: 100%;
+        }
+    }
+}
