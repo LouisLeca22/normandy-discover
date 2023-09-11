@@ -20,7 +20,7 @@ const Card = ({activity, map}: {activity: Activity, map: Map | null}) => {
             {fetchCategoryIcon(activity.category, CategoryIconType.card) as ReactNode}
         </div>
         <div className="card__middle">
-            {activity[`desc${lang}`].substring(0,250).concat("...")}
+            {activity[`desc${lang}`].substring(0,200).concat("...")}
         </div>
         <div className="card__bottom">
                 <span>
